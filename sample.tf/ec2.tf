@@ -1,3 +1,12 @@
+data "aws_ami" "centos" {
+  owners      = ["973714476881"]
+  most_recent = true
+  name_regex  = "Centos-8-DevOps-Practice"
+}
+output "aws-ami" {
+  value = data.aws_ami.centos.image_id
+}
+
 resource "aws_instance" "frontend" {
   ami           = "ami-0bb6af715826253bf"
   instance_type = "t3.micro"
@@ -6,14 +15,7 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-data "aws_ami" "centos" {
-  owners      = ["973714476881"]
-  most_recent = true
-  name_regex  = "centos-8-Devops-Practice"
-}
-output "aws-ami" {
-  value = data.aws_ami.centos.image_id
-}
+
 
 resource "aws_instance" "catalogue" {
   ami           = "ami-0bb6af715826253bf"
