@@ -6,6 +6,9 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
+output "catalogue" {
+  value = aws_instance.catalogue.public_ip
+}
 resource "aws_instance" "catalogue" {
   ami           = "ami-0bb6af715826253bf"
   instance_type = "t3.micro"
