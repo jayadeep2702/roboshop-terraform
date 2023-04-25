@@ -6,9 +6,16 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-output "catalogue" {
-  value = aws_instance.catalogue.public_ip
+data "aws_ami" "centos8" {
+  owners      = ["973714476881"]
+  most_recent = true
+  name_regex  = "centos-8-Devops-Practice"
+
 }
+output "aws-ami" {
+  value = data.aws_ami.centos8.image_id
+}
+
 resource "aws_instance" "catalogue" {
   ami           = "ami-0bb6af715826253bf"
   instance_type = "t3.micro"
