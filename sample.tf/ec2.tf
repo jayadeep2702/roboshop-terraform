@@ -1,3 +1,8 @@
+data "aws_ami" "frontend" {
+  owners           = ["973714476881"]
+  most_recent      = true
+  name_regex       = "Centos-8-DevOps-Practice"
+}
 
 resource "aws_instance" "frontend" {
   ami           = "ami-0bb6af715826253bf"
