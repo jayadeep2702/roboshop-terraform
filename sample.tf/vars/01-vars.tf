@@ -1,5 +1,5 @@
 variable "sample_string" {
-  default = "Hello world"
+  default = "jayadeep"
 }
 
 output "sample_string" {
@@ -7,5 +7,5 @@ output "sample_string" {
 }
 
 output "sample_string1" {
-  value = "valuue fo the string = ${var.sample_string}"
+  value = "value of the string = ${var.sample_string}"
 }
