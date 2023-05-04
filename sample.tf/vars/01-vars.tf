@@ -52,8 +52,10 @@ output "sample_dict_string" {
 }
 
 
+
 output "sample_dict_number" {
   value = var.sample_dict["number"]
 }
 
 
+variable "env" {}
