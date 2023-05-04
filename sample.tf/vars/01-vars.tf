@@ -39,4 +39,21 @@ output "sample_list" {
   value = var.sample_list[2]
 }
 
+variable "sample_dict" {
+  default = {
+    number = 100
+    string = "nandini"
+    boolean = false
+  }
+}
+
+output "sample_dict_string" {
+  value = var.sample_dict["string"]
+}
+
+
+output "sample_dict_number" {
+  value = var.sample_dict["number"]
+}
+
 
