@@ -36,7 +36,7 @@ variable "sample_list" {
 }
 
 output "sample_list" {
-  value = "var.sample_list[2]"
+  value = var.sample_list[2]
 }
 
 
