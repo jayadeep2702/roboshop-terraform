@@ -26,6 +26,17 @@ output "sample_boolean" {
   value = var.sample_boolean
 }
 
+variable "sample_list" {
+  default = [
+  100,
+  "jayadeep",
+  false,
+  567
+  ]
+}
 
+output "sample_list" {
+  value = "var.sample_list[2]"
+}
 
 
