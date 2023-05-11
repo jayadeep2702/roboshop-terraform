@@ -31,8 +31,8 @@ variable "sample_dict" {
 }
 
 output "sample_dict_num1" {
-  value = var.sample_dict[number]
+  value = var.sample_dict["number"]
 }
 output "sample_dict_name" {
-  value = var.sample_dict[name]
+  value = var.sample_dict["name"]
 }
