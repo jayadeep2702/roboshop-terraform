@@ -12,7 +12,7 @@ output "sample_string1" {
 variable "sample_list" {
   default = [
     100,
-    abc,
+    jayadeep,
     true
   ]
 }
