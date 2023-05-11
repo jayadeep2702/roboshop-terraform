@@ -24,7 +24,7 @@ output "sample_list" {
 variable "sample_dict" {
   default = {
     number =2702
-    name=nandu
+    name= "nandu"
     boolean=false
     number1=5050
   }
