@@ -36,3 +36,9 @@ output "sample_dict_num1" {
 output "sample_dict_name" {
   value = var.sample_dict["name"]
 }
+
+variable "env" {}
+
+output "env" {
+  value = var.env
+}
