@@ -61,6 +61,6 @@ data "aws_security_group" "Allow-all" {
 }
 
 output "aws_security" {
-  value = data.aws_security_group.Allow-all
+  value = data.aws_security_group.Allow-all.id
 }
 
