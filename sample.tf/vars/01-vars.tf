@@ -54,3 +54,13 @@ variable "sample1" {}
 output "sample1" {
   value = var.sample1
 }
+
+
+data "aws_security_group" "Allow-all" {
+  name = "Allow -all"
+}
+
+output "aws_security" {
+  value = data.aws_security_group.Allow-all
+}
+
