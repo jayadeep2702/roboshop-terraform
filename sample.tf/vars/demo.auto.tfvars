@@ -1,1 +1,1 @@
-auto_num1 = 200
+ auto_num = 500

@@ -1,1 +1,1 @@
-sample1 = 500
+sample1 = "jayadeep"

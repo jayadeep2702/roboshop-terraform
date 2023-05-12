@@ -42,3 +42,15 @@ variable "env" {}
 output "env" {
   value = var.env
 }
+
+variable "auto_num" {}
+
+output "auto" {
+  value = var.auto_num
+}
+
+variable "sample1" {}
+
+output "sample1" {
+  value = var.sample1
+}
