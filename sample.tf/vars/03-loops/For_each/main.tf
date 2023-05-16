@@ -1,8 +1,8 @@
-resource "null_resource" "bikes" {
+resource "null_resource" "fruits" {
   for_each = var.fruits
 
   provisioner "local-exec" {
-    command = "echo bike name - ${var.fruits[each.key]}"
+    command = "echo fruit name ${each.key} -  ${each.value}"
   }
 }
 
@@ -11,6 +11,5 @@ variable "fruits" {
     apple = 52
     banana = 100
     ornage = 200
-
   }
 }
