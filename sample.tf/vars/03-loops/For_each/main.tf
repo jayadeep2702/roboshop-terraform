@@ -33,8 +33,8 @@ variable "fruits1" {
   count = 500
 }
    orange = {
-  name  = orange
-  count = 400
+     name  = orange
+     count = 400
    }
  }
 }
