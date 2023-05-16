@@ -3,9 +3,13 @@ resource "null_resource" "null" {
 }
 
 resource "null_resource" "bikes" {
-  count = length(var.list)
+  count = length(var.bikes)
+
+  provisioner "local-exec" {
+    command = "echo bike name - ${var.bikes[count.index]}"
+  }
 }
 
-variable "list" {
+variable "bikes" {
   default = ["yamaha","honda","royal"]
 }
