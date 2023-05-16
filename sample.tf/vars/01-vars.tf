@@ -64,3 +64,8 @@ output "aws_security" {
   value = data.aws_security_group.Allow-all.id
 }
 
+data "aws_security_groups" "jayadeep" {}
+
+output "aws_sg" {
+  value = data.aws_security_groups.jayadeep
+}
