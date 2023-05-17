@@ -8,6 +8,9 @@ data "aws_security_group" "Allow-all" {
   name = "Allow -all"
 }
 
+variable "aws_instance" {
+  default = ["frontend","mongobd","catalogue","user"]
+}
 variable "instance_type" {
   default = "t3.small"
 }
@@ -18,13 +21,14 @@ resource "aws_route53_record" "frontend" {
   ttl     = 300
   records = [aws_instance.frontend.private_ip]
 }
-  resource "aws_instance" "frontend" {
+  resource "aws_instance" "instance" {
+    count = length(var.aws_instance)
   ami           = data.aws_ami.centos.image_id
   instance_type = var.instance_type
   vpc_security_group_ids = [ data.aws_security_group.Allow-all.id]
 
   tags = {
-    Name = "frontend"
+    Name = var.aws_instance[count.index]
   }
 }
 
