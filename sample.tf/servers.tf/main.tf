@@ -1,13 +1,55 @@
 variable "components" {
-  default = ["frontend","mongobd","catalogue","user"]
+  default = {
+    frontend = {
+      name = "frontend"
+      instance_type = "t3.micro"
+    }
+    user = {
+      name = "user"
+      instance_type = "t3.micro"
+    }
+    mongodb = {
+      name = "mongodb"
+      instance_type = "t3.micro"
+    }
+    catalogue = {
+      name = "catalogue"
+      instance_type = "t3.micro"
+    }
+    redis = {
+      name = "redis"
+      instance_type = "t3.micro"
+    }
+    rabbitmq = {
+      name = "rabbitmq"
+      instance_type = "t3.micro"
+    }
+    payment = {
+      name = "payment"
+      instance_type = "t3.micro"
+    }
+    shipping = {
+      name = "shipping"
+      instance_type = "t3.micro"
+    }
+    cart = {
+      name = "cart"
+      instance_type = "t3.micro"
+    }
+    mysql = {
+      name = "mysql"
+      instance_type = "t3.micro"
+    }
+
+  }
 }
 
 resource "aws_instance" "instance" {
-  count = length(var.components)
+  for_each = var.components
   ami   = "ami-0b5a2b5b8f2be4ec2"
-  instance_type = "t3.micro"
+  instance_type = each.key["instance_type"]
 
   tags = {
-    Name = var.components[count.index]
+    Name = each.key["name"]
   }
 }
