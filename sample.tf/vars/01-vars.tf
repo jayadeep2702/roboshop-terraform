@@ -22,3 +22,12 @@ variable "sample_list" {
     123
   ]
 }
+
+variable "sample_dict" {
+  default = [
+  name ="jayadeep"
+  number1 =2702
+  boolean =true
+  name1 ="nandu"
+  ]
+}

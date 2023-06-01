@@ -8,3 +8,7 @@ output "sample_string1" {
 output "sample_list_3" {
   value = var.sample_list[3]
 }
+
+output "sample_dict" {
+  value = var.sample_dict["name"]
+}
