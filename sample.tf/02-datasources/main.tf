@@ -1,5 +1,5 @@
 data "aws_security_group" "selected" {
-  name = Allow -all
+  name = "Allow -all"
 }
 
 output "security_group" {
