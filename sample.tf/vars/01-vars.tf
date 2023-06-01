@@ -24,10 +24,10 @@ variable "sample_list" {
 }
 
 variable "sample_dict" {
-  default = [
-  name ="jayadeep"
-  number1 =2702
-  boolean =true
-  name1 ="nandu"
-  ]
+  default = {
+    name    = "jayadeep"
+    number1 = 2702
+    boolean = true
+    name1   = "nandu"
+  }
 }
