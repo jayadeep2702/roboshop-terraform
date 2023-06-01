@@ -2,9 +2,23 @@ variable "sample_string" {
   default = "jayadeep"
 }
 
-output "sample_string" {
-  value = var.sample_string
+variable "sample_number" {
+  default =100
 }
-output "sample_string1" {
-  value = "value of the variable = ${var.sample_string}"
+
+variable "sample_boolean" {
+  default = true
+}
+
+
+#variable types
+# we have list variable , which means single variable can hold multiple values
+
+variable "sample_list" {
+  default = [
+    100,
+    "abc",
+    true,
+    123
+  ]
 }
