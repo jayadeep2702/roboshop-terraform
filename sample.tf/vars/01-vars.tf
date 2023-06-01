@@ -31,3 +31,5 @@ variable "sample_dict" {
     name1   = "nandu"
   }
 }
+
+variable "env" {}
