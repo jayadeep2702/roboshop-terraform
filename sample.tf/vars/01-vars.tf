@@ -1,5 +1,5 @@
 variable "sample_string" {
-  default = jayadeep
+  default = "jayadeep"
 }
 
 output "sample_string" {
