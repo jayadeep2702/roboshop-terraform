@@ -1,1 +1,1 @@
-sample1 = "jayadeep"
+sample1 = 8080
