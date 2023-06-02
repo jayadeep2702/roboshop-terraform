@@ -2,6 +2,7 @@ resource "null_resource" "null" {
   count = 6
 }
 
+
 resource "null_resource" "bikes" {
   count = length(var.bikes)
 
